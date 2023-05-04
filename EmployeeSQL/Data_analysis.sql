@@ -65,10 +65,10 @@ select e.emp_no as employee_number,
 e.last_name,
 e.first_name
 from employees e where e.emp_no in (select de.emp_no 
-									from dept_emp de, 
-									departments d where 
-									de.dept_no = d.dept_no 
-									and trim(upper(d.dept_name)) = 'SALES')
+				from dept_emp de, 
+				departments d where 
+				de.dept_no = d.dept_no 
+				and trim(upper(d.dept_name)) = 'SALES')
 
 
 --List each employee in the Sales and Development departments, including their employee number, last name, first name, and department name.
